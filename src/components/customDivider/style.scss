@@ -1,0 +1,22 @@
+.custom-divider {
+  --divider-color: #ddd;
+  --divider-opacity: 0.8;
+
+  border-bottom: 1px solid var(--divider-color);
+  opacity: var(--divider-opacity);
+  margin: 10px 0;
+  padding: 0 40px;
+  position: relative;
+
+  .text-divider {
+    padding: 0 0.165rem;
+    width: fit-content;
+    position: absolute;
+    top: -0.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffff;
+    font-size: 10px;
+    background-color: #000;
+  }
+}

@@ -2,33 +2,63 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
+import { IonReactRouter } from "@ionic/react-router";
+import { Redirect, Route } from "react-router";
+import "./index.css";
+
+/* Core Ionic framework styles */
+import "@ionic/react/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+import "@ionic/react/css/normalize.css";
+import "@ionic/react/css/structure.css";
+import "@ionic/react/css/typography.css";
+
+/* Optional CSS utils that can be commented out */
+import "@ionic/react/css/padding.css";
+import "@ionic/react/css/float-elements.css";
+import "@ionic/react/css/text-alignment.css";
+import "@ionic/react/css/text-transformation.css";
+import "@ionic/react/css/flex-utils.css";
+import "@ionic/react/css/display.css";
+import HomePage from './pages/home';
+import Login from './pages/auth/login/Login';
+import Register from './pages/auth/register';
+
+/* Ionic Theme variables */
+// import "./variables.css";
+
+setupIonicReact();
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <IonApp>
+      <IonReactRouter>
+        <Route
+          path="/login"
+          component={Login}
+        />
+        <Route
+          path="/register"
+          component={Register}
+        />
+        <Route
+          path="/home/artist/:artistId"
+          // component={ArtistPage}
+        />
+        <Route
+          path="/home/album/:albumId"
+          // component={AlbumDetail}
+        />
+        <Route path="/home/search" />
+        <Route
+          path="/home"
+          component={HomePage}
+        />  
+      </IonReactRouter>
+    </IonApp>
   )
 }
 
