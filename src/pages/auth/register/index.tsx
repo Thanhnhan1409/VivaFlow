@@ -5,8 +5,14 @@ import { IonButton, IonButtons, IonInput } from '@ionic/react';
 import CustomIonInput from '../../../components/customInput';
 import { mainColor } from '../../../themes/constants';
 import CustomDivider from '../../../components/customDivider';
+import { useHistory } from 'react-router';
 
 function Register() {
+  const history = useHistory()
+  const handleClick = () => {
+    history.push("/login")
+  }
+  
   return (
     <div className="container login-container">
       {/* <img src={bgAuth} alt="Background" className="bg-image" /> */}
@@ -33,7 +39,7 @@ function Register() {
             </IonButton>
           </IonButtons>
           <div className="text-white">
-            Already have an account? <a href="/register" className="text-[#892FE0]">Sign in</a>
+            Already have an account? <span onClick={handleClick} className="text-[#892FE0]">Sign in</span>
           </div>
         </form>
       </div>  

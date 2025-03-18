@@ -3,3 +3,7 @@
 .ion-router-outlet {
   pointer-events: none;
 }
+
+.container {
+  padding: 0 21px;
+}

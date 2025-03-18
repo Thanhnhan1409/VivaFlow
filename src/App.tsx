@@ -1,11 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
+import { IonApp, setupIonicReact } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { Redirect, Route } from "react-router";
-import "./index.css";
+import { Route } from "react-router";
 
 /* Core Ionic framework styles */
 import "@ionic/react/css/core.css";
@@ -27,7 +22,7 @@ import Login from './pages/auth/login/Login';
 import Register from './pages/auth/register';
 
 /* Ionic Theme variables */
-// import "./variables.css";
+import "./themes/common.css";
 
 setupIonicReact();
 
