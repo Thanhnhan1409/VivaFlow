@@ -18,7 +18,7 @@ function Register() {
       {/* <img src={bgAuth} alt="Background" className="bg-image" /> */}
       <div className="overlay"></div>
       <div className="login-form flex flex-col h-full justify-center">
-        <div className="flex flex-col items-center gap-2 mb-20">
+        <div className="flex flex-col items-center gap-2 mb-10">
           <img src={Logo} alt="VivaFlow" />
           <div className="text-xl font-bold text-white">Sign up to VivaFlow</div>
         </div>
@@ -29,18 +29,21 @@ function Register() {
             <CustomIonInput placeholder="Input your password" type="password" />
             <CustomIonInput placeholder="Confirm your password" type="password" />
           </div>
-          <IonButtons slot="start">
-            <IonButton color={mainColor} className="w-full py-2 bg-[#892FE0] text-white rounded-xl" expand="block">Sign up</IonButton>
-          </IonButtons>
-          <CustomDivider />
-          <IonButtons slot="start">
-            <IonButton className="w-full py-2 bg-white text-[#892FE0] rounded-xl" expand="block">
-              Sign in with Google
-            </IonButton>
-          </IonButtons>
-          <div className="text-white">
-            Already have an account? <span onClick={handleClick} className="text-[#892FE0]">Sign in</span>
+          <div className="flex flex-col gap-3 justify-center">
+            <IonButtons slot="start">
+              <IonButton color={mainColor} className="w-full py-2 bg-[#892FE0] text-white rounded-xl" expand="block">Sign up</IonButton>
+            </IonButtons>
+            <CustomDivider />
+            <IonButtons slot="start">
+              <IonButton className="w-full py-2 bg-white text-[#892FE0] rounded-xl" expand="block">
+              <span className="text-md">Sign in with Google</span>
+              </IonButton>
+            </IonButtons>
+            <div className="text-white text-center">
+              Already have an account? <span onClick={handleClick} className="text-[#892FE0]">Sign in</span>
+            </div>
           </div>
+          
         </form>
       </div>  
     </div>
