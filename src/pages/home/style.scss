@@ -2,6 +2,7 @@
   height: 100vh;
   background: url('../../assets/images/bg_home.png') no-repeat center center;
   background-size: cover;
+  overflow-y: auto;
 
   &.container {
     padding-top:  4rem;

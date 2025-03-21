@@ -8,3 +8,7 @@
   padding: 0 21px;
   color: #fff;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

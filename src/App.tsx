@@ -23,6 +23,7 @@ import Register from './pages/auth/register';
 
 /* Ionic Theme variables */
 import "./themes/common.css";
+import PlaySongItem from "./components/song/playSong";
 
 setupIonicReact();
 
@@ -46,6 +47,10 @@ function App() {
         <Route
           path="/home/album/:albumId"
           // component={AlbumDetail}
+        />
+        <Route
+          path="/song/:songID"
+          component={PlaySongItem}
         />
         <Route path="/home/search" />
         <Route

@@ -1,12 +1,13 @@
 import { IonIcon, IonItem, IonLabel, IonList, IonModal } from '@ionic/react'
 import React, { useState } from 'react'
 import { ellipsisHorizontalOutline } from 'ionicons/icons';
+import Album_Cover from '../../../assets/images/rose_album.jpg'
 
 function DisplayItem() {
   return (
     <div className="flex gap-2 items-center">
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-bargjHS0bbEvbcmCkoUHD649_T1AfqU6tQ&s"
+        src={Album_Cover}
         alt=""
         width={50}
         height={50}
@@ -22,7 +23,7 @@ function DisplayItem() {
   )
 }
 
-function SongItem() {
+function CardSongItem() {
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -83,4 +84,4 @@ function SongItem() {
   )
 }
 
-export default SongItem;
+export default CardSongItem;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import SongItem from '../../components/SongItem'
 import './style.scss'
 import { IonIcon, IonInput, IonLabel, IonSegment, IonSegmentButton } from '@ionic/react'
 import CustomIonInput from '../../components/customInput'
 import { search } from 'ionicons/icons'
-import PlayListCardItem from '../../components/PlayList/CardItem'
+import PlayListCardItem from '../../components/playList/CardItem'
+import CardSongItem from '../../components/song/cardSong'
 
 enum SegmentEnum {
   Artist = "artist",
@@ -18,7 +18,7 @@ function HomePage() {
   // const [segment, setSegment] = useState<SegmentEnum>(SegmentEnum.Artist)
   return (
     <div className="container home-container">
-      {/* <SongItem /> */}
+      {/* <CardSongItem /> */}
       <div className="flex flex-col gap-2">
         <p className="text-xl font-bold">Welcome back!</p>
         <p className="text-sm text-[#A5A5A5]">What do you feel like today?</p>
@@ -49,7 +49,7 @@ function HomePage() {
         <div className="flex flex-col gap-4">
           {
             Array.from({ length: 10 }).map((_, index) => (
-              <SongItem key={index} />
+              <CardSongItem key={index} />
             ))
           }
         </div>

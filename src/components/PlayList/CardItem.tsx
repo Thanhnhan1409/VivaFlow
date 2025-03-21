@@ -1,10 +1,11 @@
 import React from 'react'
+import Album_Cover from '../../assets/images/rose_album.jpg'
 
 function PlayListCardItem() {
   return (
     <div className="flex flex-col gap-2 w-[208px] flex-shrink-0">
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-bargjHS0bbEvbcmCkoUHD649_T1AfqU6tQ&s"
+        src={Album_Cover}
         alt="album"
         width={208}
         height={208}
